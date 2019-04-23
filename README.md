@@ -93,3 +93,8 @@ for (i=0;i<entities.size();i++) {
 This is where the response arraylist is being compared with each and every entity's attributes to look for a match also a part of
 the layer processing
 
+## Running the program
+
+
+Note: When trying to execute the program always make sure to close the excel file or it will cause an error like in the picture 
+
