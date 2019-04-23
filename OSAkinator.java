@@ -51,7 +51,6 @@ public class OSAkinator {
 	                i = 1;
 	                k++;
         }
-        //attributes.remove(0);
         attributeMapping.remove(0);
         Scanner input = new Scanner(System.in);
         ArrayList<Integer> response = new ArrayList<Integer>();
