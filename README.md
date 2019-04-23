@@ -18,6 +18,8 @@ public static final String SAMPLE_XLSX_FILE_PATH = "C:/Users/Eugene/Documents/Pr
 ```
 This syntax is used to use the excel file which in my case was awa2_4os which was found under that directory.
 ![ExcelFile](Capture.PNG)
+
+This is the layer database
 ```
 ArrayList<String> attributes = new ArrayList<String>();
 ArrayList<String> entities = new ArrayList<String>();
@@ -72,7 +74,7 @@ for(i=0;i<attributes.size();i++) {
 	        		}
 	        	}
 ```
-This is done to add the attribute data the user requests to an arraylist called response
+This is done to add the attribute data the user requests to an arraylist called response a part of the layer processing
 ```
 for (i=0;i<entities.size();i++) {
 		        	count = 0;
@@ -88,5 +90,6 @@ for (i=0;i<entities.size();i++) {
 			        }
 		        }
 ```
-This is where the response arraylist is being compared with each and every entity's attributes to look for a match
+This is where the response arraylist is being compared with each and every entity's attributes to look for a match also a part of
+the layer processing
 
