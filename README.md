@@ -15,6 +15,43 @@ Details of adding the apache-poi library into your java class (https://www.youtu
 ## Syntax of the program
 >    public static final String SAMPLE_XLSX_FILE_PATH = "C:/Users/Eugene/Documents/Programming/awa2_4os.xlsx";
 
-This command is used to use the excel file which in my case was awa2_4os which was found under that directory.
+This syntax is used to use the excel file which in my case was awa2_4os which was found under that directory.
 
->
+>  ArrayList<String> attributes = new ArrayList<String>();
+>  ArrayList<String> entities = new ArrayList<String>();
+>  ArrayList<ArrayList<Integer> > attributeMapping = new ArrayList<ArrayList<Integer> >(); 
+  
+The function uses three array lists where one of them is a dimensional variant. This is used as a mapping to store each and every attributes of all the entities.
+
+>for (Row row : sheet) {
+        	attributeMapping.add(new ArrayList<Integer>());
+	                for (Cell cell : row) {
+	                	if ( i == 0) {
+	                	String value = cell.getStringCellValue();
+	                	attributes.add(value);
+	                	}
+	                	else {
+	                		try {
+	                			if ( j == 0) {
+	                				String value = cell.getStringCellValue();
+	                				entities.add(value);
+	                				j=1;
+	                			}
+	                			else {
+	                				int value = (int) cell.getNumericCellValue();
+	                				 attributeMapping.get(k).add(value);
+	                				 if (value != 1 && value != 0) {
+	                					 attributeMapping.remove(k);
+	                					 break;
+	                				 }
+	                			}
+	                		}
+	                		catch(Exception e){
+	                			break;
+	                		}
+	                	}
+	                }
+	                j = 0;
+	                i = 1;
+	                k++;
+>        }
