@@ -16,11 +16,11 @@ Details of adding the apache-poi library [into your java class](https://www.yout
 >    public static final String SAMPLE_XLSX_FILE_PATH = "C:/Users/Eugene/Documents/Programming/awa2_4os.xlsx";
 
 This syntax is used to use the excel file which in my case was awa2_4os which was found under that directory.
-
->  ArrayList<String> attributes = new ArrayList<String>();
->  ArrayList<String> entities = new ArrayList<String>();
->  ArrayList<ArrayList<Integer> > attributeMapping = new ArrayList<ArrayList<Integer> >(); 
-  
+```
+ArrayList<String> attributes = new ArrayList<String>();
+ArrayList<String> entities = new ArrayList<String>();
+ArrayList<ArrayList<Integer> > attributeMapping = new ArrayList<ArrayList<Integer> >(); 
+```  
 The function uses three array lists where one of them is a dimensional variant. This is used as a mapping to store each and every attributes of all the entities.
 
 >for (Row row : sheet) {
