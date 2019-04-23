@@ -14,5 +14,7 @@ Details of adding the apache-poi library into your java class (https://www.youtu
 
 ## Syntax of the program
 >    public static final String SAMPLE_XLSX_FILE_PATH = "C:/Users/Eugene/Documents/Programming/awa2_4os.xlsx";
+
 This command is used to use the excel file which in my case was awa2_4os which was found under that directory.
+
 >
