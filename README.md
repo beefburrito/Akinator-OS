@@ -16,7 +16,7 @@ Details of adding the apache-poi library [into your java class in eclipse](https
 ```
 public static final String SAMPLE_XLSX_FILE_PATH = "C:/Users/Eugene/Documents/Programming/awa2_4os.xlsx";
 ```
-This syntax is used to use the excel file which in my case was awa2_4os which was found under that directory.
+This syntax is used to use the excel file which in my case was [awa2_4os](https://github.com/beefburrito/Akinator-OS/blob/master/awa2_4os.xlsx) which was found under that directory.
 ![ExcelFile](Capture.PNG)
 
 This is the layer database
