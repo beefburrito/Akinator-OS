@@ -98,7 +98,7 @@ the layer processing
 ![ErrorMSG](error.PNG)
 Note: When trying to execute the program always make sure to close the excel file or it will cause an error like in the picture 
 ![program](program.PNG)
-
+Press 1 to start or 2 to exit
 ![run](run.PNG)
 When running the program will ask various questions and you either type y for yes or n for no
 ![snek](snake.PNG)
