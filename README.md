@@ -17,7 +17,7 @@ Details of adding the apache-poi library [into your java class](https://www.yout
 public static final String SAMPLE_XLSX_FILE_PATH = "C:/Users/Eugene/Documents/Programming/awa2_4os.xlsx";
 ```
 This syntax is used to use the excel file which in my case was awa2_4os which was found under that directory.
-![ExcelFile](https://cloud.githubusercontent.com/assets/499192/8718466/e58c679c-2ba4-11e5-8e3c-3f9955b810f7.jpg)
+![ExcelFile](Capture.PNG)
 ```
 ArrayList<String> attributes = new ArrayList<String>();
 ArrayList<String> entities = new ArrayList<String>();
