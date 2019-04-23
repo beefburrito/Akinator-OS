@@ -17,6 +17,7 @@ Details of adding the apache-poi library [into your java class](https://www.yout
 public static final String SAMPLE_XLSX_FILE_PATH = "C:/Users/Eugene/Documents/Programming/awa2_4os.xlsx";
 ```
 This syntax is used to use the excel file which in my case was awa2_4os which was found under that directory.
+![ExcelFile](https://cloud.githubusercontent.com/assets/499192/8718466/e58c679c-2ba4-11e5-8e3c-3f9955b810f7.jpg)
 ```
 ArrayList<String> attributes = new ArrayList<String>();
 ArrayList<String> entities = new ArrayList<String>();
@@ -57,3 +58,35 @@ for (Row row : sheet) {
 	                k++;
         }
 ```
+The purpose of this function is to add all of the data into arraylists, I did so because I am not fairly familiar with the syntax of iterating cell by cell
+
+```
+for(i=0;i<attributes.size();i++) {
+	        		System.out.println("Is it " + attributes.get(i) +"? y/n");
+	        		char ans = input.next().charAt(0);
+	        		if (ans=='y') {
+	        			response.add(1);
+	        		}
+	        		else {
+	        			response.add(0);
+	        		}
+	        	}
+```
+This is done to add the attribute data the user requests to an arraylist called response
+```
+for (i=0;i<entities.size();i++) {
+		        	count = 0;
+		        	for (j=0;j<attributes.size();j++) {
+		        		if (attributeMapping.get(i).get(j)==response.get(j)) {
+		        			count++;
+		        		}
+		        	}
+		        	if (count ==attributes.size()) {
+			        	System.out.println("Is it " + entities.get(i)+ "?");
+			        	count = -1;
+			        	break;
+			        }
+		        }
+```
+This is where the response arraylist is being compared with each and every entity's attributes to look for a match
+
