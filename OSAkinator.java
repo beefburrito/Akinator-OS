@@ -51,18 +51,18 @@ public class OSAkinator {
 	                i = 1;
 	                k++;
         }
-        attributes.remove(0);
+        //attributes.remove(0);
         attributeMapping.remove(0);
         Scanner input = new Scanner(System.in);
         ArrayList<Integer> response = new ArrayList<Integer>();
-
-        System.out.println("======================================================================="
-        		+ "\nAKINATOR OS\n What do you want to do?\n 1.Start\n 2.Exit\n"
-        		+ "=======================================================================");
-        int answer = input.nextInt();
-        int count = 0;
         int start =1;
+        int count = 0;
         while (start==1) {
+        	count = 0;
+	        System.out.println("======================================================================="
+	        		+ "\nAKINATOR OS\n What do you want to do?\n 1.Start\n 2.Exit\n"
+	        		+ "=======================================================================");
+	        int answer = input.nextInt();
 	        if (answer == 1) {
 	        	for(i=0;i<attributes.size();i++) {
 	        		System.out.println("Is it " + attributes.get(i) +"? y/n");
@@ -74,14 +74,28 @@ public class OSAkinator {
 	        			response.add(0);
 	        		}
 	        	}
-	        
+		        for (i=0;i<entities.size();i++) {
+		        	count = 0;
+		        	for (j=0;j<attributes.size();j++) {
+		        		if (attributeMapping.get(i).get(j)==response.get(j)) {
+		        			count++;
+		        		}
+		        	}
+		        	if (count ==attributes.size()) {
+			        	System.out.println("Is it " + entities.get(i)+ "?");
+			        	count = -1;
+			        	break;
+			        }
+		        }
+		        if (count != -1) {
+		        	System.out.println("No matches");
+		        }
 	        }
 	        else {
 	        	if (answer == 2) {
 	        		start = 0;
 	        	}
 	        }
-	        count = 0;
         }
         workbook.close();
     }
